@@ -22,7 +22,7 @@ jobs:
       run: npm run build
     - name: Publish new release
       run: |
-        npm publish
+        npm publish --access=public
         PACKAGE=$(node -p "require('./package.json').name")
         VERSION=$(node -p "require('./package.json').version")
         until [ $(npm view $PACKAGE --json | jq --arg version "$VERSION" -r '.versions[] | select (. == $version)') ];
