@@ -5797,6 +5797,20 @@ const Cluster: {
         },
         commandsResponse: {},
     },
+    manuSpecificSuxsem: {
+        ID: 0xfc00,
+        manufacturerCode: ManufacturerCode.RESERVED,
+        attributes: {
+            pairTagMode: {ID: 0x0001, type: DataType.boolean},
+        },
+        commands: {
+            clearAllTags: {
+                ID: 0x0000,
+                parameters: [],
+            },
+        },
+        commandsResponse: {},
+    },
 };
 
 export default Cluster;
